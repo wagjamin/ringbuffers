@@ -9,8 +9,8 @@
 
 namespace ringbuffers {
 
-/// A lock-free thread-safe ringbuffer built to maximize message throughput.
-/// Competitor to the MutexRingbuffer which uses much more heavy
+/// A thread-safe ringbuffer that only uses atomics to maximize message
+/// throughput. Competitor to the MutexRingbuffer which uses much more heavy
 /// synchronization primitives.
 template <class PayloadT> class AtomicRingbuffer {
 public:

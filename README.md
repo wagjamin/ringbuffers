@@ -1,7 +1,7 @@
 ## Ringbuffers
 
 This repository contains a header-only implementation of two C++ ringbuffers. 
-- `AtomicRingbuffer` is a fixed-capacity, non-partitioned ringbuffer that's lock-free
+- `AtomicRingbuffer` is a fixed-capacity, non-partitioned ringbuffer that only uses atomics
 - `MutexRingbuffer` is a fixed-capacity, partitioned ringbuffer that uses heavyweight mutexes and condition variables
 
 Unit tests are in `test`, a simple microbenchmark that does concurrent reading and writing is in `bench`.
